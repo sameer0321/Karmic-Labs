@@ -62,24 +62,24 @@ body {
 
 .lines::after {
     content: "";
-    width: 158px;
+    width: 100%;
     height: 1px;
     background-color: #FFF;
     position: absolute;
-    top: 35%;
-    left: 29%;
-    transform: rotate(-4deg);
+    top: -19%;
+    left: 50%;
+    transform: rotate(-4deg) translateX(-50%);
 }
 
 .lines::before {
     content: "";
-    width: 172px;
+    width: 100%;
     height: 1px;
     background-color: #FFF;
     position: absolute;
-    top: 43%;
-    left: 27%;
-    transform: rotate(-4deg);
+    left: 50%;
+    transform: rotate(-4deg) translateX(-50%);
+    bottom: 13%;
 }
 
 .cursor-pointer {
@@ -88,7 +88,7 @@ body {
 
 .bg-img {
     background-image: url("/assets/images/section-img.png");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     min-height: 865px;
 }
@@ -178,23 +178,25 @@ body {
 }
 .lines-2::after {
     content: "";
-    width: 344px;
+    width: 35%;
     height: 1px;
     background-color: #FFF;
     position: absolute;
-    top: 52%;
-    left: 42%;
-    transform: rotate(-5deg);
+    top: -50%;
+    left: 56%;
+    transform: rotate(-5deg) translateX(-50%);
+    min-width: 200px;
 }
 .lines-2::before {
     content: "";
-    width: 344px;
+    width: 29%;
     height: 1px;
     background-color: #FFF;
     position: absolute;
-    top: 104%;
-    left: 37%;
-    transform: rotate(-5deg);
+    transform: rotate(-4deg) translateX(-50%);
+    left: 48%;
+    bottom: 3%;
+    min-width: 200px;
 }
 
 
@@ -290,23 +292,25 @@ body {
 }
 .lines-3::after {
     content: "";
-    width: 344px;
+    width: 26%;
     height: 1px;
     background-color: #FFF;
     position: absolute;
-    top: 21%;
-    left: 42%;
-    transform: rotate(-4deg);
+    top: -27%;
+    left: 52%;
+    transform: rotate(-4deg) translateX(-50%);
+    min-width: 200px;
 }
 .lines-3::before {
     content: "";
-    width: 344px;
+    width: 29%;
     height: 1px;
     background-color: #FFF;
     position: absolute;
-    top: 36%;
-    left: 36%;
-    transform: rotate(-4deg);
+    left: 46%;
+    transform: rotate(-4deg) translateX(-50%);
+    bottom: 10%;
+    min-width: 200px;
 }
 
 .pt-136 {
@@ -315,6 +319,7 @@ body {
 
 .card-2 {
     max-width: 264px;
+    height: 100%;
     padding: 20px;
     border-radius: 12px;
     background-color: transparent;
@@ -388,10 +393,8 @@ body {
 
 .bg-img-2 {
     background-image: url("/assets/images/section-img-2.png");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    min-height: 1024px;
-    position: relative;
     top: 140px;
 }
 
@@ -406,23 +409,25 @@ body {
 }
 .lines-4::after {
     content: "";
-    width: 344px;
+    width: 29%;
     height: 1px;
     background-color: #000000;
     position: absolute;
-    top: 9%;
-    left: 42%;
-    transform: rotate(-3deg);
+    top: -21%;
+    left: 53%;
+    transform: rotate(-3deg) translateX(-50%);
+    min-width: 200px;
 }
 .lines-4::before {
     content: "";
-    width: 344px;
+    width: 30%;
     height: 1px;
     background-color: #000000;
     position: absolute;
-    top: 16%;
-    left: 36%;
-    transform: rotate(-3deg);
+    left: 46%;
+    transform: rotate(-3deg) translateX(-50%);
+    bottom: 5%;
+    min-width: 200px;
 }
 
 
@@ -491,23 +496,25 @@ color: #040404;
 }
 .lines-5::after {
     content: "";
-    width: 344px;
+    width: 29%;
     height: 1px;
     background-color: #FFF;
     position: absolute;
-    top: -1%;
-    left: 41%;
-    transform: rotate(-3deg);
+    top: -20%;
+    left: 53%;
+    transform: rotate(-3deg) translateX(-50%);
+    min-width: 200px;
 }
 .lines-5::before {
     content: "";
-    width: 344px;
+    width: 27%;
     height: 1px;
     background-color: #FFF;
     position: absolute;
-    top: 7%;
-    left: 36%;
-    transform: rotate(-3deg);
+    left: 45%;
+    transform: rotate(-3deg) translateX(-50%);
+    bottom: 10%;
+    min-width: 200px;
 }
 
 
@@ -587,22 +594,34 @@ letter-spacing: 0em;
 text-align: center;
 color: white;
 border-radius: 0px 0px 8px 8px;
-width: 326px;
+width: 100%;
 height: 47px;
 background-color: #FFFFFF4D;
 box-shadow: 0px -1px 11px 0px #FFFFFF1A;
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
 }
 .hover-text{
-    position: absolute;
+    /* position: absolute;
     bottom: -20%;
-    right: -15%;
+    right: -15%; */
     display: none;
 }
 .project-item:hover .hover-text {
     display: block;
+    transform: scale(1.2);
+}
+.project-item:hover .font22{
+    position: absolute;
+    bottom: -14px;
 }
 .pt-56{
     padding-top: 56px;
+}
+.pb-121{
+    padding-bottom: 121px;
 }
 .ellipse-1{
     width: 174px;
@@ -644,11 +663,24 @@ box-shadow: 0px -1px 11px 0px #FFFFFF1A;
     right: 0;
     top: -13%;
 }
-.hover2:hover{
-    color: gray;
+.box-shadow{
+    border-radius: 8px;
+border: 1px solid #3F3F41;
+background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+box-shadow: 0px 4px 15px 0px rgba(255, 255, 255, 0.10);
 }
 .hover3:hover{
-    transform: scale(1.1);
+    border: none;
+}
+@media(max-width:1400px){
+    .vh-100{
+        height: 100vh;
+    }
+}
+@media(max-width:1200px){
+    .vh-100{
+        height: unset;
+    }
 }
 @media(max-width:992px){
     .card{
@@ -671,23 +703,41 @@ box-shadow: 0px -1px 11px 0px #FFFFFF1A;
     .bg-img-2{
         background-color: #FFFFFF;
     }
-    .lines::after,.lines::before{
-        display: none;
+    .bg-img{
+        background-size: cover;
     }
-    .lines-2::after,.lines-2::before{
-        display: none;
+    .project-item:hover .project-img {
+        transform: unset;
     }
-    .lines-3::after,.lines-3::before{
-        display: none;
+    .project-item:hover .hover-text {
+        transform: unset;
     }
-    .lines-4::after,.lines-4::before{
-        display: none;
+    .project-item:hover .font22{
+        bottom: 0;
     }
-    .lines-5::after,.lines-5::before{
-        display: none;
+    .circle{
+        right: 0;
     }
-    .pb-20{
-        padding-bottom: 20px;
+    .mt-40{
+        margin-top: 40px;
+    }
+    .pt-105{
+        padding-top: 40px;
+    }
+    .pt-136,.pt-100{
+        padding-top: 55px;
+    }
+    .pb-121{
+        padding-bottom: 45px;
+    }
+    .pt-173{
+        padding-top: 80px;
+    }
+    .pt-69{
+        padding-top: 30px;
+    }
+    .font8{
+        font-size: 46px;
     }
 }
 @media(max-width:940px){
@@ -732,4 +782,14 @@ box-shadow: 0px -1px 11px 0px #FFFFFF1A;
     .font7{
         font-size: 13px;
     }
+    .font8{
+        font-size: 30px;
+    }
 }
+@media(max-width:400px){
+    .font4{
+        font-size: 32px;
+    }
+}
+
+
